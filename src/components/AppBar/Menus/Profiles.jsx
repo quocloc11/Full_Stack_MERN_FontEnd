@@ -34,7 +34,7 @@ function Profiles() {
           aria-haspopup="true"
           aria-expanded={open ? 'true' : undefined}
         >
-          <Avatar sx={{ width: 34, height: 34 }}
+          <Avatar sx={{ width: 36, height: 36 }}
             alt="quocloc"
             src='https://scontent.xx.fbcdn.net/v/t1.15752-9/398370164_6113920898711123_7676872517399476854_n.jpg?stp=dst-jpg_p206x206&_nc_cat=108&ccb=1-7&_nc_sid=510075&_nc_ohc=VubIAyBAtqsAX8kuZq0&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQPF1CfGEsZhJw0pcfH7EWdffjaQ0T_JcqhBeh_4ZhSEQ&oe=65A6653A'>
           </Avatar>
