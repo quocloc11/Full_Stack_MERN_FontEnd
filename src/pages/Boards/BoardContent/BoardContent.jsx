@@ -4,7 +4,7 @@ import ListColumns from './ListColumns/ListColumns'
 import { mapOrder } from '~/utils/sorts'
 import { useEffect, useState } from 'react';
 import { arrayMove } from '@dnd-kit/sortable';
-import { DndContext, PointerSensor, MouseSensor, TouchSensor, useSensor, useSensors, DragOverlay, defaultDropAnimationSideEffects } from '@dnd-kit/core';
+import { DndContext, PointerSensor, MouseSensor, TouchSensor, useSensor, useSensors, DragOverlay, defaultDropAnimationSideEffects, closestCorners } from '@dnd-kit/core';
 import Column from './ListColumns/Column/Column';
 import Card from './ListColumns/Column/ListCards/Card/Card';
 import { cloneDeep } from 'lodash';
@@ -113,6 +113,7 @@ function BoardContent({ board }) {
   return (
     <DndContext
       onDragStart={handleDragStart}
+      collisionDetection={closestCorners}
       onDragOver={handleDragOver}
       onDragEnd={handleDragEnd}
       sensors={sensors}>
