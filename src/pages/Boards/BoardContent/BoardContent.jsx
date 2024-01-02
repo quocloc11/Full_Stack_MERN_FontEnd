@@ -5,13 +5,14 @@ import { mapOrder } from '~/utils/sorts'
 import { useEffect, useState, useCallback, useRef } from 'react';
 import { arrayMove } from '@dnd-kit/sortable';
 import {
-  DndContext, PointerSensor, MouseSensor, TouchSensor, useSensor, useSensors, DragOverlay,
+  DndContext, PointerSensor, useSensor, useSensors, DragOverlay,
   defaultDropAnimationSideEffects, closestCorners, pointerWithin, rectIntersection, getFirstCollision, closestCenter
 } from '@dnd-kit/core';
 import Column from './ListColumns/Column/Column';
 import Card from './ListColumns/Column/ListCards/Card/Card';
 import { cloneDeep, isEmpty } from 'lodash';
 import { generatePlaceholderCard } from '~/utils/formatters';
+import { MouseSensor, TouchSensor } from '~/customLibraries/DndKitSensors';
 const ACTIVE_DRAG_ITEM_TYPE = {
   COLUMN: 'ACTIVE_DRAG_ITEM_TYPE_COLUMN',
   CARD: 'ACTIVE_DRAG_ITEM_TYPE_CARD'
